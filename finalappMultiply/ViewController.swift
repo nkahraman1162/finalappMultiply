@@ -9,12 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var numberOne: UITextField!
+    @IBOutlet weak var numberTwo: UITextField!
+    @IBOutlet weak var answer: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .magenta
     }
 
-
+    @IBAction func whenButtonPressed(_ sender: Any) {
+        let firstValue = Double(numberOne.text!)
+        let secondValue = Double(numberTwo.text!)
+       
+        let result = Double(firstValue! * secondValue!)
+        
+        answer.text = "\(result)"
+        
+        
+        
+        
+        
+        
+    
+     
+    }
+    
+    
 }
 
